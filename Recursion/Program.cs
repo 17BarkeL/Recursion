@@ -23,11 +23,12 @@ namespace Recursion
                 Console.Write("Enter a number: ");
             }
 
+            Console.WriteLine($"The factorial of {n} is {RecursiveFactorial(n)}");
 
             Console.ReadLine();
         }
 
-        /*static int Factorial(int number)
+        static int IterativeFactorial(int number)
         {
             int factorial = 1;
 
@@ -37,6 +38,16 @@ namespace Recursion
             }
 
             return factorial;
-        }*/
+        }
+
+        static int RecursiveFactorial(int number)
+        {
+            if (number == 1)
+            {
+                return 1;
+            }
+
+            return number * RecursiveFactorial(number - 1);
+        }
     }
 }
